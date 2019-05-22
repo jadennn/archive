@@ -161,7 +161,7 @@ class InputStream extends InputStreamBase {
 
   /// Read a null-terminated string, or if [len] is provided, that number of
   /// bytes returned as a string.
-  String readString({int size, bool utf8 = true}) {
+  String readString({int size, bool utf8 = false}) {
     if (size == null) {
       List<int> codes = [];
       while (!isEOS) {
