@@ -41,7 +41,7 @@ class ZipFileHeader {
       localHeaderOffset = input.readUint32();
 
       if (fname_len > 0) {
-        filename = input.readString(size: fname_len);
+        filename = input.readString(size: fname_len, utf8: false);
       }
 
       if (extra_len > 0) {
